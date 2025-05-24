@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('decode_form').addEventListener('submit', async e => {
     e.preventDefault();
-    const short_url = document.getElementById('short_url').value;
+    const url = document.getElementById('short_url').value;
     const res = await fetch('/api/v1/decode', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ short_url }),
+      body: JSON.stringify({ url }),
     });
     const data = await res.json();
     const resultElem = document.getElementById('decode_result');
