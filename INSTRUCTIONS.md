@@ -93,10 +93,14 @@ Visit the app at [http://localhost:3000](http://localhost:3000)
 
 ## 🧪 Running Tests
 
-This project uses RSpec.
+This project uses **RSpec** to test both **Model validations** and **API endpoints**.
+
+### 📦 Setup Test Environment
+
+Before running tests, make sure the test database is created and migrated:
 
 ```bash
 rails db:create RAILS_ENV=test 
-rails db:migrate RAILS_ENV=test 
+rails db:migrate RAILS_ENV=test ## 🧪 Running Tests
 bundle exec rspec
 ```
