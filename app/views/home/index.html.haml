@@ -1,0 +1,23 @@
+%h1 ShortLink Service
+
+%div.container
+  %form#encode_form
+    %label{ for: 'url' } Enter URL to encode:
+    %input{ type: 'text', name: 'url', id: 'url', placeholder: 'Enter URL' }
+    %button{ type: 'submit' } Encode
+    %div.result-box
+      %p#encode_result
+      %button#copy_encode{ type: 'button', style: 'display: none;' } 📋 Copy
+
+  %hr/
+
+  %form#decode_form
+    %label{ for: 'short_url' } Enter Short URL to decode:
+    %input{ type: 'text', name: 'short_url', id: 'short_url', placeholder: 'Enter short link URL' }
+    %button{ type: 'submit' } Decode
+    %div.result-box
+      %p#decode_result
+      %button#copy_decode{ type: 'button', style: 'display: none;' } 📋 Copy
+
+= javascript_include_tag 'shortlink'
+= stylesheet_link_tag 'shortlink', media: 'all'
